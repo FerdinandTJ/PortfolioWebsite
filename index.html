@@ -1812,11 +1812,21 @@
             }
             
             /* Re-enable text selection for content */
-            p, li, h1, h2, h3, .project-content, .form-group input, .form-group textarea {
+            p, li, h1, h2, h3, .project-content, .form-group input, .form-group textarea, .form-group select, .form-submit-btn {
                 -webkit-user-select: text;
                 -moz-user-select: text;
                 -ms-user-select: text;
                 user-select: text;
+            }
+            
+            /* Enable button interactions on mobile */
+            .form-submit-btn, .contact-btn, button {
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-tap-highlight-color: rgba(255, 255, 255, 0.1);
+                touch-action: manipulation;
             }
             
             /* Contact Form Mobile */
@@ -3939,21 +3949,47 @@ Sent from your portfolio website`;
             const submitBtn = document.querySelector('.form-submit-btn');
             const originalText = submitBtn.innerHTML;
             
-            submitBtn.innerHTML = '<i class="fas fa-check"></i> Redirecting to WhatsApp...';
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Opening WhatsApp...';
             submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+            submitBtn.disabled = true;
             
+            // Detect device type for better handling
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+            const isAndroid = /android/i.test(userAgent);
+            const isMobile = isIOS || isAndroid || /Mobi|Android/i.test(userAgent);
+            
+            // Function to handle the redirect
+            function handleWhatsAppRedirect() {
+                try {
+                    if (isMobile) {
+                        // For mobile devices, use direct navigation
+                        window.location.href = whatsappURL;
+                    } else {
+                        // For desktop, try new window first
+                        const newWindow = window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+                        if (!newWindow) {
+                            // If popup blocked, redirect in same window
+                            window.location.href = whatsappURL;
+                        }
+                    }
+                } catch (error) {
+                    console.log('WhatsApp redirect error:', error);
+                    // Fallback: always redirect in same window
+                    window.location.href = whatsappURL;
+                }
+            }
+            
+            // Execute redirect immediately for better mobile compatibility
+            handleWhatsAppRedirect();
+            
+            // Reset form after a delay (for when user comes back)
             setTimeout(() => {
-                window.open(whatsappURL, '_blank');
-                
-                // Reset form
                 document.getElementById('contactForm').reset();
-                
-                // Reset button
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.background = 'linear-gradient(135deg, #25d366, #22c55e)';
-                }, 2000);
-            }, 1000);
+                submitBtn.innerHTML = originalText;
+                submitBtn.style.background = 'linear-gradient(135deg, #25d366, #22c55e)';
+                submitBtn.disabled = false;
+            }, 2000);
         });
 
         // Form field animations
@@ -3970,6 +4006,32 @@ Sent from your portfolio website`;
                 }
             });
         });
+
+        // Enhanced mobile touch handling for form submission
+        const submitButton = document.querySelector('.form-submit-btn');
+        if (submitButton) {
+            // Prevent double-tap zoom on mobile
+            submitButton.addEventListener('touchstart', function(e) {
+                e.preventDefault();
+                this.style.transform = 'translateY(0) scale(0.98)';
+            }, { passive: false });
+            
+            submitButton.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                this.style.transform = 'translateY(-2px) scale(1)';
+                // Trigger form submission
+                document.getElementById('contactForm').dispatchEvent(new Event('submit'));
+            }, { passive: false });
+            
+            // Also handle regular click for desktop
+            submitButton.addEventListener('click', function(e) {
+                if (!('ontouchstart' in window)) {
+                    // Only handle click if not a touch device
+                    e.preventDefault();
+                    document.getElementById('contactForm').dispatchEvent(new Event('submit'));
+                }
+            });
+        }
     </script>
 </body>
 </html>
