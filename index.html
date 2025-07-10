@@ -1200,6 +1200,141 @@
             color: rgba(255, 255, 255, 0.9);
         }
 
+        /* Contact Form */
+        .contact-form-container {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            margin: 0 auto 60px auto;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form-container h3 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 15px 18px;
+            color: var(--text-color);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(255, 137, 6, 0.1);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        .form-submit-btn {
+            background: linear-gradient(135deg, #25d366, #22c55e);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            padding: 18px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .form-submit-btn:hover::before {
+            left: 100%;
+        }
+
+        .form-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            background: linear-gradient(135deg, #22c55e, #25d366);
+        }
+
+        .form-submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .form-submit-btn i {
+            font-size: 1.2rem;
+        }
+
         /* Contact Methods Grid */
         .contact-methods {
             display: grid;
@@ -1677,11 +1812,49 @@
             }
             
             /* Re-enable text selection for content */
-            p, li, h1, h2, h3, .project-content {
+            p, li, h1, h2, h3, .project-content, .form-group input, .form-group textarea {
                 -webkit-user-select: text;
                 -moz-user-select: text;
                 -ms-user-select: text;
                 user-select: text;
+            }
+            
+            /* Contact Form Mobile */
+            .contact-form-container {
+                margin: 0 auto 40px auto;
+                padding: 25px 20px;
+                border-radius: 15px;
+            }
+            
+            .contact-form-container h3 {
+                font-size: 1.5rem;
+                margin-bottom: 25px;
+            }
+            
+            .contact-form {
+                gap: 20px;
+            }
+            
+            .form-group label {
+                font-size: 0.9rem;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 12px 15px;
+                font-size: 16px; /* Prevents zoom on iOS */
+                border-radius: 10px;
+            }
+            
+            .form-group textarea {
+                min-height: 100px;
+            }
+            
+            .form-submit-btn {
+                padding: 15px 25px;
+                font-size: 1rem;
+                border-radius: 12px;
             }
             
             /* Smooth momentum scrolling for iOS */
@@ -2316,6 +2489,29 @@
                 font-size: 0.7rem;
             }
             
+            /* Contact Form Small Mobile */
+            .contact-form-container {
+                padding: 20px 15px;
+                margin: 0 auto 30px auto;
+            }
+            
+            .contact-form-container h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+            
+            .form-group input,
+            .form-group select,
+            .form-group textarea {
+                padding: 10px 12px;
+                font-size: 16px;
+            }
+            
+            .form-submit-btn {
+                padding: 12px 20px;
+                font-size: 0.95rem;
+            }
+            
             /* Extra small adjustments */
             .skill-category {
                 padding: 20px 15px;
@@ -2660,9 +2856,15 @@
                 </div>
                 <p class="fadeIn delay-1">Computer Science student with a deep passion for Full-Stack Development, Mobile Applications, IoT, and Cybersecurity. I love building solutions that are not only functional but also solve real-world problems.</p>
                 <div class="social-links fadeIn delay-2">
-                    <a href="https://github.com/FerdinandTJ" target="_blank">GitHub</a>
-                    <a href="https://instagram.com/ferdinandtj__" target="_blank">Instagram</a>
-                    <a href="https://linkedin.com/in/your-username" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/FerdinandTJ" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://instagram.com/ferdinandtj__" target="_blank">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://linkedin.com/in/your-username" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
                 </div>
             </div>
         </section>
@@ -3052,6 +3254,45 @@
                 <h2>Get In Touch</h2>
                 <p>I'm currently looking for new opportunities and collaboration. Whether you have a project in mind, want to discuss technology, or just want to say hi, I'd love to hear from you!</p>
                 
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3>Send me a message</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="Project Collaboration">Project Collaboration</option>
+                                <option value="Job Opportunity">Job Opportunity</option>
+                                <option value="Freelance Work">Freelance Work</option>
+                                <option value="Technical Discussion">Technical Discussion</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project, ideas, or just say hello..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            Send
+                        </button>
+                    </form>
+                </div>
+
                 <div class="contact-methods">
                     <div class="contact-card">
                         <div class="contact-icon">
@@ -3062,7 +3303,7 @@
                         <h3>WhatsApp</h3>
                         <p>Send me a message for quick communication</p>
                         <a href="https://wa.me/62816846662" target="_blank" class="contact-btn whatsapp-btn">
-                            <span>💬</span> Send Message
+                            <i class="fab fa-whatsapp" style="color: #25d366; font-size: 1.2rem;"></i> Send Message
                         </a>
                     </div>
                     
@@ -3075,7 +3316,7 @@
                         <h3>Email</h3>
                         <p>For formal inquiries and collaborations</p>
                         <a href="mailto:ferdinand@example.com" class="contact-btn email-btn">
-                            <span>✉️</span> Send Email
+                            <i class="fas fa-envelope" style="color: #ea4335; font-size: 1.2rem;"></i> Send Email
                         </a>
                     </div>
                     
@@ -3090,10 +3331,10 @@
                         <p>Follow me on social platforms</p>
                         <div class="social-contact-links">
                             <a href="https://instagram.com/ferdinandtj__" target="_blank" class="social-contact-btn instagram-btn">
-                                <span>📷</span> Instagram
+                                <i class="fab fa-instagram" style="color: #e4405f; font-size: 1.2rem;"></i> Instagram
                             </a>
                             <a href="https://github.com/FerdinandTJ" target="_blank" class="social-contact-btn github-btn">
-                                <span>⚡</span> GitHub
+                                <i class="fab fa-github" style="color: #333; font-size: 1.2rem;"></i> GitHub
                             </a>
                         </div>
                     </div>
@@ -3650,6 +3891,84 @@
             if (document.getElementById('skills')) {
                 animateSkillBars();
             }
+        });
+
+        // Contact Form WhatsApp Integration
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value.trim();
+            
+            // Validate required fields
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields before sending.');
+                return;
+            }
+            
+            // Validate email format
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Format message for WhatsApp
+            const whatsappMessage = `Hi Ferdinand! 👋
+
+*Name:* ${name}
+*Email:* ${email}
+*Subject:* ${subject}
+
+*Message:*
+${message}
+
+---
+Sent from your portfolio website`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // WhatsApp URL with your number
+            const whatsappURL = `https://wa.me/62816846662?text=${encodedMessage}`;
+            
+            // Show success message and redirect
+            const submitBtn = document.querySelector('.form-submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fas fa-check"></i> Redirecting to WhatsApp...';
+            submitBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+            
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+                
+                // Reset form
+                document.getElementById('contactForm').reset();
+                
+                // Reset button
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.background = 'linear-gradient(135deg, #25d366, #22c55e)';
+                }, 2000);
+            }, 1000);
+        });
+
+        // Form field animations
+        document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(field => {
+            field.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'translateY(-2px)';
+                this.style.borderColor = 'var(--primary-color)';
+            });
+            
+            field.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'translateY(0)';
+                if (!this.value) {
+                    this.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                }
+            });
         });
     </script>
 </body>
