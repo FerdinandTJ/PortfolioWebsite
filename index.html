@@ -1174,6 +1174,17 @@
 
         /* --- General Mobile Optimizations --- */
         @media (max-width: 768px) {
+            /* Prevent horizontal scrolling on mobile */
+            html, body {
+                overflow-x: hidden;
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+            
+            * {
+                box-sizing: border-box;
+            }
+            
             /* Smooth scrolling and performance optimizations */
             * {
                 -webkit-tap-highlight-color: transparent;
@@ -1240,6 +1251,15 @@
                 padding: 100px 0 50px;
                 min-height: 100vh;
                 text-align: center;
+                overflow-x: hidden;
+            }
+            
+            #hero .container {
+                max-width: 100%;
+                width: 100%;
+                padding: 0 15px;
+                box-sizing: border-box;
+                overflow: hidden;
             }
             
             .profile-image-container {
@@ -1260,7 +1280,31 @@
                 font-size: 0.95rem;
                 margin-bottom: 1.5rem;
                 line-height: 1.6;
-                padding: 0 10px;
+                padding: 0 20px;
+                max-width: 100%;
+                width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                hyphens: auto;
+                -webkit-hyphens: auto;
+                -moz-hyphens: auto;
+                text-align: center;
+            }
+            
+            .typing-container {
+                max-width: 100%;
+                width: 100%;
+                overflow: hidden;
+                text-align: center;
+                padding: 0 20px;
+                box-sizing: border-box;
+            }
+            
+            #typing-text {
+                max-width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
             }
             
             .social-links {
@@ -1522,6 +1566,15 @@
             
             #hero {
                 padding: 90px 0 40px;
+                overflow-x: hidden;
+            }
+            
+            #hero .container {
+                max-width: 100%;
+                width: 100%;
+                padding: 0 10px;
+                box-sizing: border-box;
+                overflow: hidden;
             }
             
             #hero h1 {
@@ -1530,7 +1583,21 @@
             
             #hero p {
                 font-size: 0.9rem;
-                padding: 0 5px;
+                padding: 0 15px;
+                max-width: 100%;
+                width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                line-height: 1.6;
+            }
+            
+            .typing-container {
+                max-width: 100%;
+                width: 100%;
+                overflow: hidden;
+                text-align: center;
+                padding: 0 15px;
+                box-sizing: border-box;
             }
             
             .profile-image-container {
@@ -1597,6 +1664,34 @@
             
             #hero h1 {
                 font-size: 1.6rem;
+            }
+            
+            #hero p {
+                font-size: 0.85rem;
+                padding: 0 12px;
+                max-width: 100%;
+                width: 100%;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                line-height: 1.6;
+                text-align: center;
+            }
+            
+            .typing-container {
+                max-width: 100%;
+                width: 100%;
+                overflow: hidden;
+                text-align: center;
+                padding: 0 12px;
+                box-sizing: border-box;
+            }
+            
+            #hero .container {
+                max-width: 100%;
+                width: 100%;
+                padding: 0 8px;
+                box-sizing: border-box;
+                overflow: hidden;
             }
             
             .profile-image-container {
