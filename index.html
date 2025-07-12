@@ -7,7 +7,46 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#ff8906">
-    <title>Ferdinand - Portfolio</title>
+    <title>Ferdinand - Full-Stack Developer & Mobile App Developer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Ferdinand - Computer Science student specializing in Full-Stack Development, Mobile Applications, IoT, and Cybersecurity. Building innovative solutions for real-world problems.">
+    <meta name="keywords" content="Ferdinand, Full-Stack Developer, Mobile App Developer, IoT, Cybersecurity, Computer Science, Web Development, Laravel, Flutter, React">
+    <meta name="author" content="Ferdinand">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ferdinandtj.github.io/portfolio">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Ferdinand - Full-Stack Developer & Mobile App Developer">
+    <meta property="og:description" content="Computer Science student specializing in Full-Stack Development, Mobile Applications, IoT, and Cybersecurity. Building innovative solutions for real-world problems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ferdinandtj.github.io/portfolio">
+    <meta property="og:image" content="https://ferdinandtj.github.io/portfolio/foto.jpg">
+    <meta property="og:image:alt" content="Ferdinand - Full-Stack Developer">
+    <meta property="og:site_name" content="Ferdinand Portfolio">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ferdinand - Full-Stack Developer & Mobile App Developer">
+    <meta name="twitter:description" content="Computer Science student specializing in Full-Stack Development, Mobile Applications, IoT, and Cybersecurity.">
+    <meta name="twitter:image" content="https://ferdinandtj.github.io/portfolio/foto.jpg">
+    <meta name="twitter:image:alt" content="Ferdinand - Full-Stack Developer">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     
     <!-- DevIcons CDN -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
@@ -15,10 +54,51 @@
     <!-- Alternative CDN for better compatibility -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Prism.js for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    
     <!-- Simple Icons CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/icons.css">
     
-    <style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ferdinand",
+        "jobTitle": "Full-Stack Developer",
+        "description": "Computer Science student specializing in Full-Stack Development, Mobile Applications, IoT, and Cybersecurity",
+        "url": "https://ferdinandtj.github.io/portfolio",
+        "sameAs": [
+            "https://github.com/FerdinandTJ",
+            "https://instagram.com/ferdinandtj__",
+            "https://linkedin.com/in/ferdinandtj"
+        ],
+        "email": "ferdinandtj4@gmail.com",
+        "image": "https://ferdinandtj.github.io/portfolio/foto.jpg",
+        "knowsAbout": [
+            "Full-Stack Development",
+            "Mobile Application Development",
+            "Internet of Things (IoT)",
+            "Cybersecurity",
+            "Laravel",
+            "Flutter",
+            "React",
+            "PHP",
+            "JavaScript",
+            "Python",
+            "C/C++",
+            "MySQL",
+            "Firebase"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Computer Science"
+        }
+    }
+    </script>
+    
+        <style>
         /* --- General Styling --- */
         :root {
             --bg-color: #0f0e17;
@@ -1166,6 +1246,372 @@
             grid-column: 1 / -1;
         }
 
+        /* --- Playground Section --- */
+        #playground {
+            padding: 80px 0;
+            background: linear-gradient(135deg, rgba(15, 14, 23, 0.9) 0%, rgba(127, 90, 240, 0.1) 100%);
+            position: relative;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        #playground::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.03;
+            z-index: -1;
+        }
+
+        .playground-intro {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .playground-container {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 0;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            /* Fallback for browsers that don't support backdrop-filter */
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Modern browsers with backdrop-filter support */
+        @supports (backdrop-filter: blur(20px)) {
+            .playground-container {
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+            }
+        }
+
+        /* Microsoft Edge specific fixes */
+        @supports (-ms-ime-align: auto) {
+            .playground-container {
+                background: rgba(255, 255, 255, 0.15) !important;
+                border: 2px solid rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            .playground-header {
+                background: rgba(255, 255, 255, 0.1) !important;
+            }
+            
+            .editor-panel, .preview-panel {
+                background: rgba(255, 255, 255, 0.05) !important;
+            }
+        }
+
+        /* Fallback for Internet Explorer and older Edge */
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+            .playground-container {
+                background: rgba(255, 255, 255, 0.15) !important;
+                border: 2px solid rgba(255, 255, 255, 0.2) !important;
+            }
+            
+            .fadeIn {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+        }
+
+        /* Force playground visibility for all browsers */
+        #playground {
+            display: block !important;
+        }
+
+        .playground-container {
+            display: block !important;
+        }
+
+        .playground-header, .playground-content, .playground-features {
+            display: block !important;
+        }
+
+        /* Fix for fade-in animation issues */
+        #playground .fadeIn {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Microsoft Edge animation fix */
+        @supports (-ms-ime-align: auto) {
+            .fadeIn {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+                animation: none !important;
+            }
+        }
+
+        .playground-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .playground-tabs {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+        }
+
+        .playground-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .example-selector {
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            color: var(--text-color);
+            cursor: pointer;
+            min-width: 150px;
+        }
+
+        .example-selector option {
+            background: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        .btn-run, .btn-reset {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-run {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: white;
+        }
+
+        .btn-run:hover {
+            background: linear-gradient(135deg, #16a34a, #22c55e);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        .btn-reset {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            color: white;
+        }
+
+        .btn-reset:hover {
+            background: linear-gradient(135deg, #dc2626, #ef4444);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
+        }
+
+        .playground-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+        }
+
+        .editor-panel {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .editor-container {
+            position: relative;
+            height: 100%;
+        }
+
+        .editor-tab {
+            display: none;
+            height: 100%;
+        }
+
+        .editor-tab.active {
+            display: block;
+        }
+
+        .code-editor {
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            border: none;
+            color: var(--text-color);
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 20px;
+            resize: none;
+            outline: none;
+            overflow-y: auto;
+        }
+
+        .code-editor::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .preview-panel {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .preview-title {
+            color: var(--text-color);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-fullscreen {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-fullscreen:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--primary-color);
+        }
+
+        .preview-frame {
+            flex: 1;
+            border: none;
+            background: white;
+            width: 100%;
+            height: 100%;
+            min-height: 450px;
+        }
+
+        .playground-features {
+            margin-top: 50px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(127, 90, 240, 0.2);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .feature-item h4 {
+            color: var(--text-color);
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .feature-item p {
+            color: rgba(255, 255, 255, 0.7);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Fullscreen Preview */
+        .preview-panel.fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            background: white;
+        }
+
+        .preview-panel.fullscreen .preview-frame {
+            height: calc(100vh - 60px);
+        }
+
         /* --- Contact Section --- */
         #contact {
             text-align: center;
@@ -1645,6 +2091,113 @@
             animation: pulse 0.6s ease-in-out;
         }
         
+        /* Hero CTA Buttons */
+        .hero-cta {
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--text-color);
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            min-width: 160px;
+            justify-content: center;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 137, 6, 0.4);
+        }
+        
+        .cta-button.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid var(--primary-color);
+            backdrop-filter: blur(10px);
+        }
+        
+        .cta-button.secondary:hover {
+            background: rgba(255, 137, 6, 0.1);
+            box-shadow: 0 10px 25px rgba(255, 137, 6, 0.2);
+        }
+        
+        /* Image Fallback */
+        .image-fallback {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            color: rgba(255, 255, 255, 0.6);
+            height: 200px;
+        }
+        
+        .image-fallback i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .image-fallback span {
+            font-size: 0.9rem;
+            text-align: center;
+        }
+        
+        /* Focus Management */
+        *:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-color);
+            color: var(--text-color);
+            padding: 8px;
+            text-decoration: none;
+            border-radius: 0 0 8px 8px;
+            z-index: 10001;
+            transition: top 0.3s ease;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
         @keyframes pulse {
             0% { transform: translateY(-7px) scale(1.05); }
             50% { transform: translateY(-10px) scale(1.1); }
@@ -1971,6 +2524,31 @@
                 white-space: normal;
             }
             
+            /* Hero CTA Buttons Mobile */
+            .hero-cta {
+                margin-top: 1.5rem;
+                flex-direction: column;
+                align-items: center;
+                gap: 0.8rem;
+            }
+            
+            .cta-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+                border-radius: 25px;
+                min-width: 180px;
+                min-height: 44px;
+                transition: all 0.2s ease;
+            }
+            
+            .cta-button:active {
+                transform: scale(0.95);
+            }
+            
+            .cta-button.secondary {
+                border-width: 1px;
+            }
+            
             .social-links {
                 margin-top: 1.5rem;
                 display: flex;
@@ -2277,6 +2855,107 @@
             .specialty-tech span {
                 padding: 4px 10px;
                 font-size: 0.75rem;
+            }
+            
+            /* Playground Mobile */
+            #playground {
+                padding: 50px 0;
+            }
+
+            .playground-intro {
+                font-size: 1rem;
+                margin-bottom: 30px;
+                padding: 0 10px;
+            }
+
+            .playground-container {
+                margin: 0 10px;
+                border-radius: 15px;
+            }
+
+            .playground-header {
+                flex-direction: column;
+                padding: 15px 20px;
+                gap: 15px;
+            }
+
+            .playground-tabs {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .tab-btn {
+                flex: 1;
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .playground-controls {
+                width: 100%;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .example-selector {
+                flex: 1;
+                min-width: auto;
+                padding: 8px 12px;
+                font-size: 0.9rem;
+            }
+
+            .btn-run, .btn-reset {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+
+            .playground-content {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .editor-panel {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                min-height: 300px;
+            }
+
+            .code-editor {
+                padding: 15px;
+                font-size: 13px;
+                min-height: 300px;
+            }
+
+            .preview-panel {
+                min-height: 300px;
+            }
+
+            .preview-frame {
+                min-height: 300px;
+            }
+
+            .feature-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 20px;
+            }
+
+            .feature-item {
+                padding: 20px 15px;
+            }
+
+            .feature-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 15px;
+                font-size: 1.3rem;
+            }
+
+            .feature-item h4 {
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+            }
+
+            .feature-item p {
+                font-size: 0.9rem;
             }
             
             /* Contact Mobile */
@@ -2827,6 +3506,7 @@
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#playground">Playground</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -2847,33 +3527,42 @@
             <li><a href="#hero" class="mobile-nav-link">Home</a></li>
             <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
             <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+            <li><a href="#playground" class="mobile-nav-link">Playground</a></li>
             <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
     </div>
 
-    <main>
-        <section id="hero">
-            <div id="particles-js"></div>
+    <main id="main-content" role="main">
+        <section id="hero" aria-labelledby="hero-heading">
+            <div id="particles-js" aria-hidden="true"></div>
             <div class="container">
                 <div class="hero-image-wrapper">
                     <div class="profile-image-container fadeIn">
-                        <img src="foto.jpg" alt="Ferdinand" class="profile-image">
+                        <img src="foto.jpg" alt="Ferdinand - Full-Stack Developer and Computer Science Student" class="profile-image" loading="eager">
                     </div>
                 </div>
-                <h1 class="fadeIn">Ferdinand</h1>
+                <h1 class="fadeIn" id="hero-heading">Ferdinand</h1>
                 <div class="typing-container fadeIn delay-1">
                     <p id="typing-text"></p>
                 </div>
                 <p class="fadeIn delay-1">Computer Science student with a deep passion for Full-Stack Development, Mobile Applications, IoT, and Cybersecurity. I love building solutions that are not only functional but also solve real-world problems.</p>
                 <div class="social-links fadeIn delay-2">
-                    <a href="https://github.com/FerdinandTJ" target="_blank">
+                    <a href="https://github.com/FerdinandTJ" target="_blank" rel="noopener noreferrer" aria-label="Visit Ferdinand's GitHub Profile">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <a href="https://instagram.com/ferdinandtj__" target="_blank">
+                    <a href="https://instagram.com/ferdinandtj__" target="_blank" rel="noopener noreferrer" aria-label="Visit Ferdinand's Instagram Profile">
                         <i class="fab fa-instagram"></i> Instagram
                     </a>
-                    <a href="https://linkedin.com/in/ferdinandtj" target="_blank">
+                    <a href="https://linkedin.com/in/ferdinandtj" target="_blank" rel="noopener noreferrer" aria-label="Visit Ferdinand's LinkedIn Profile">
                         <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+                <div class="hero-cta fadeIn delay-3">
+                    <a href="#contact" class="cta-button" aria-label="Get in touch with Ferdinand">
+                        <i class="fas fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <a href="resume.pdf" class="cta-button secondary" target="_blank" rel="noopener noreferrer" aria-label="Download Ferdinand's Resume">
+                        <i class="fas fa-download"></i> Download Resume
                     </a>
                 </div>
             </div>
@@ -2885,7 +3574,7 @@
                 <div class="projects-grid">
                     
                     <div class="project-card tilt-card fadeIn delay-1">
-                        <img src="smartbin.png" alt="SmartBin IoT Project">
+                        <img src="smartbin.png" alt="SmartBin IoT Project - Smart waste management system with ESP32 and real-time monitoring" loading="lazy">
                         <div class="project-content">
                             <h3>SmartBin - IoT Waste Management</h3>
                             <p>An end-to-end IoT solution for efficient waste management using a smart trash bin that detects waste levels and sends real-time alerts through a web dashboard.</p>
@@ -2896,12 +3585,12 @@
                                 <span class="tech-tag php">PHP</span>
                                 <span class="tech-tag laravel">Laravel</span>
                             </div>
-                            <a href="https://github.com/FerdinandTJ/IoTProject_SmartTrashBin" class="project-link" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/FerdinandTJ/IoTProject_SmartTrashBin" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View SmartBin project on GitHub">View on GitHub</a>
                         </div>
                     </div>
                     
                     <div class="project-card tilt-card fadeIn delay-2">
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EnviroPay Web Application">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="EnviroPay Web Application - Fee payment system with automated billing" loading="lazy">
                         <div class="project-content">
                             <h3>EnviroPay - Fee Payment System</h3>
                             <p>A comprehensive full-stack web application designed to streamline the management and payment of residential environmental fees (IPL) with automated billing.</p>
@@ -2911,12 +3600,12 @@
                                 <span class="tech-tag mysql">MySQL</span>
                                 <span class="tech-tag javascript">JavaScript</span>
                             </div>
-                            <a href="https://github.com/FerdinandTJ/Website-Pembayaran-IPL-Iuran-Pemeliharaan-Lingkungan-" class="project-link" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/FerdinandTJ/Website-Pembayaran-IPL-Iuran-Pemeliharaan-Lingkungan-" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View EnviroPay project on GitHub">View on GitHub</a>
                         </div>
                     </div>
                     
                     <div class="project-card tilt-card fadeIn delay-3">
-                        <img src="voting.png" alt="Secure Digital Voting System">
+                        <img src="voting.png" alt="Secure Digital Voting System - Encrypted voting platform with Firebase authentication" loading="lazy">
                         <div class="project-content">
                             <h3>Secure Digital Voting System</h3>
                             <p>A robust secure voting system featuring custom AES encryption algorithm and Firebase Authentication for comprehensive user verification and data protection.</p>
@@ -2926,7 +3615,7 @@
                                 <span class="tech-tag firebase">Firebase</span>
                                 <span class="tech-tag crypto">Cryptography</span>
                             </div>
-                            <a href="https://github.com/FerdinandTJ/AplikasiVoting" class="project-link" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/FerdinandTJ/AplikasiVoting" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="View Secure Digital Voting System project on GitHub">View on GitHub</a>
                         </div>
                     </div>
 
@@ -3248,6 +3937,99 @@
             </div>
         </section>
 
+        <section id="playground" aria-labelledby="playground-heading" style="display: block !important; visibility: visible !important; opacity: 1 !important; padding: 80px 0; background: linear-gradient(135deg, rgba(15, 14, 23, 0.9) 0%, rgba(127, 90, 240, 0.1) 100%); position: relative;">
+            <div class="container">
+                <h2 class="fadeIn" id="playground-heading">Live Code Playground</h2>
+                <p class="playground-intro fadeIn delay-1">Experience my coding skills in action! Try out these interactive code examples or write your own.</p>
+                
+                <div class="playground-container fadeIn delay-2" style="display: block !important; visibility: visible !important; opacity: 1 !important;">
+                    <div class="playground-header" style="display: flex !important;">
+                        <div class="playground-tabs">
+                            <button class="tab-btn active" data-tab="html">HTML</button>
+                            <button class="tab-btn" data-tab="css">CSS</button>
+                            <button class="tab-btn" data-tab="js">JavaScript</button>
+                        </div>
+                        <div class="playground-controls">
+                            <select class="example-selector" id="exampleSelector">
+                                <option value="">Select Example</option>
+                                <option value="card">Animated Card</option>
+                                <option value="calculator">Calculator</option>
+                                <option value="todo">Todo List</option>
+                                <option value="clock">Digital Clock</option>
+                            </select>
+                            <button class="btn-run" id="runCode">
+                                <i class="fas fa-play"></i> Run Code
+                            </button>
+                            <button class="btn-reset" id="resetCode">
+                                <i class="fas fa-refresh"></i> Reset
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="playground-content" style="display: block !important;">
+                        <div class="editor-panel">
+                            <div class="editor-container">
+                                <div class="editor-tab active" data-tab="html">
+                                    <textarea id="htmlEditor" class="code-editor" placeholder="Write your HTML here..."></textarea>
+                                </div>
+                                <div class="editor-tab" data-tab="css">
+                                    <textarea id="cssEditor" class="code-editor" placeholder="Write your CSS here..."></textarea>
+                                </div>
+                                <div class="editor-tab" data-tab="js">
+                                    <textarea id="jsEditor" class="code-editor" placeholder="Write your JavaScript here..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="preview-panel">
+                            <div class="preview-header">
+                                <span class="preview-title">
+                                    <i class="fas fa-eye"></i> Live Preview
+                                </span>
+                                <button class="btn-fullscreen" id="fullscreenBtn">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                            </div>
+                            <iframe id="previewFrame" class="preview-frame" sandbox="allow-scripts allow-same-origin"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="playground-features fadeIn delay-3" style="display: block !important;">
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h4>Live Preview</h4>
+                            <p>See your code changes in real-time</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h4>Syntax Highlighting</h4>
+                            <p>Beautiful code formatting and highlighting</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Responsive</h4>
+                            <p>Works perfectly on all devices</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Examples</h4>
+                            <p>Pre-loaded examples to get started</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact">
             <div class="container">
                 <h2>Get In Touch</h2>
@@ -3364,19 +4146,78 @@
     
     <!-- Vanilla Tilt.js -->
     <script src="https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js"></script>
+    
+    <!-- Prism.js for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 
     <!-- JavaScript -->
     <script>
-        // Loading screen
+        // Loading screen with better error handling
         window.addEventListener('load', function() {
             const loadingScreen = document.querySelector('.loading-screen');
             setTimeout(() => {
                 loadingScreen.classList.add('fade-out');
+                // Remove loading screen from DOM after animation
+                setTimeout(() => {
+                    if (loadingScreen.parentNode) {
+                        loadingScreen.parentNode.removeChild(loadingScreen);
+                    }
+                }, 500);
             }, 1500);
         });
 
-        // Progress bar on scroll
-        window.addEventListener('scroll', function() {
+        // Error handling for failed resources
+        window.addEventListener('error', function(e) {
+            console.warn('Resource failed to load:', e.target.src || e.target.href);
+            // Handle broken images
+            if (e.target.tagName === 'IMG') {
+                e.target.style.display = 'none';
+                const fallback = document.createElement('div');
+                fallback.className = 'image-fallback';
+                fallback.innerHTML = '<i class="fas fa-image"></i><span>Image not available</span>';
+                e.target.parentNode.appendChild(fallback);
+            }
+        }, true);
+
+        // Performance monitoring
+        if ('performance' in window) {
+            window.addEventListener('load', function() {
+                setTimeout(() => {
+                    const perfData = performance.getEntriesByType('navigation')[0];
+                    if (perfData) {
+                        console.log('Page Load Performance:', {
+                            'DOM Content Loaded': perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart,
+                            'Load Complete': perfData.loadEventEnd - perfData.loadEventStart,
+                            'Total Page Load': perfData.loadEventEnd - perfData.navigationStart
+                        });
+                    }
+                }, 0);
+            });
+        }
+
+        // Lazy loading for images
+        if ('IntersectionObserver' in window) {
+            const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src || img.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            lazyImages.forEach(img => {
+                imageObserver.observe(img);
+            });
+        }
+
+        // Progress bar on scroll with better performance
+        let ticking = false;
+        function updateProgressBar() {
             const header = document.querySelector('.main-header');
             const scrollTop = document.querySelector('.scroll-top');
             const progressBar = document.querySelector('.progress-bar');
@@ -3384,18 +4225,70 @@
             // Calculate scroll progress
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             const scrollProgress = (window.scrollY / scrollHeight) * 100;
-            progressBar.style.width = scrollProgress + '%';
+            
+            if (progressBar) {
+                progressBar.style.width = Math.min(scrollProgress, 100) + '%';
+            }
             
             if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-                scrollTop.classList.add('show');
+                header?.classList.add('scrolled');
+                scrollTop?.classList.add('show');
             } else {
-                header.classList.remove('scrolled');
-                scrollTop.classList.remove('show');
+                header?.classList.remove('scrolled');
+                scrollTop?.classList.remove('show');
             }
+            
+            ticking = false;
+        }
+
+        function requestProgressUpdate() {
+            if (!ticking) {
+                requestAnimationFrame(updateProgressBar);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', requestProgressUpdate, { passive: true });
+
+        // Service Worker Registration for offline support
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+
+        // Enhanced error handling for external resources
+        document.addEventListener('DOMContentLoaded', function() {
+            // Check if critical resources loaded
+            const criticalResources = [
+                'https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js',
+                'https://unpkg.com/vanilla-tilt@1.7.0/dist/vanilla-tilt.min.js'
+            ];
+            
+            criticalResources.forEach(src => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.onerror = function() {
+                    console.warn('Failed to load:', src);
+                    // Provide fallback functionality
+                    if (src.includes('particles.js') && !window.particlesJS) {
+                        window.particlesJS = function() { console.log('Particles.js fallback'); };
+                    }
+                    if (src.includes('vanilla-tilt') && !window.VanillaTilt) {
+                        window.VanillaTilt = { init: function() { console.log('VanillaTilt fallback'); } };
+                    }
+                };
+                document.head.appendChild(script);
+            });
         });
 
-        // Scroll to top
+        // Scroll to top with smooth animation
         document.querySelector('.scroll-top').addEventListener('click', function() {
             window.scrollTo({
                 top: 0,
@@ -3639,6 +4532,14 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('animate-in');
+                    
+                    // Special handling for playground section
+                    if (entry.target.id === 'playground') {
+                        entry.target.style.display = 'block';
+                        entry.target.style.visibility = 'visible';
+                        entry.target.style.opacity = '1';
+                    }
+                    
                     observer.unobserve(entry.target);
                 }
             });
@@ -3647,6 +4548,12 @@
         // Observe all fade-in elements
         document.querySelectorAll('.fadeIn').forEach(el => {
             observer.observe(el);
+            
+            // Force visibility for playground elements
+            if (el.closest('#playground')) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }
         });
 
         // Parallax effect for hero section
@@ -3980,6 +4887,761 @@ ${message}`;
                 submitBtn.disabled = false;
             }, 2000);
         });
+
+        // Live Code Playground Functionality
+        class CodePlayground {
+            constructor() {
+                this.htmlEditor = document.getElementById('htmlEditor');
+                this.cssEditor = document.getElementById('cssEditor');
+                this.jsEditor = document.getElementById('jsEditor');
+                this.previewFrame = document.getElementById('previewFrame');
+                this.exampleSelector = document.getElementById('exampleSelector');
+                this.runButton = document.getElementById('runCode');
+                this.resetButton = document.getElementById('resetCode');
+                this.fullscreenButton = document.getElementById('fullscreenBtn');
+                
+                this.currentTab = 'html';
+                
+                this.examples = {
+                    card: {
+                        html: `<div class="card">
+  <div class="card-header">
+    <h3>Animated Card</h3>
+  </div>
+  <div class="card-body">
+    <p>This is a beautiful animated card with hover effects!</p>
+    <button class="btn">Click me!</button>
+  </div>
+</div>`,
+                        css: `.card {
+  width: 300px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  color: white;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-header {
+  padding: 20px;
+  background: rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.btn {
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: rgba(255,255,255,0.3);
+  transform: scale(1.05);
+}`,
+                        js: `document.querySelector('.btn').addEventListener('click', function() {
+  this.style.background = 'rgba(255,255,255,0.4)';
+  this.innerHTML = 'Clicked!';
+  
+  setTimeout(() => {
+    this.style.background = 'rgba(255,255,255,0.2)';
+    this.innerHTML = 'Click me!';
+  }, 1000);
+});
+
+// Add sparkle effect on card hover
+const card = document.querySelector('.card');
+card.addEventListener('mouseenter', function() {
+  this.style.background = 'linear-gradient(135deg, #764ba2 0%, #667eea 100%)';
+});
+
+card.addEventListener('mouseleave', function() {
+  this.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+});`
+                    },
+                    calculator: {
+                        html: `<div class="calculator">
+  <div class="display">
+    <input type="text" id="display" readonly>
+  </div>
+  <div class="buttons">
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="deleteLast()">⌫</button>
+    <button onclick="appendToDisplay('/')">/</button>
+    <button onclick="appendToDisplay('*')">×</button>
+    
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button onclick="appendToDisplay('-')">-</button>
+    
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="appendToDisplay('+')">+</button>
+    
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="calculate()" class="equals" rowspan="2">=</button>
+    
+    <button onclick="appendToDisplay('0')" class="zero">0</button>
+    <button onclick="appendToDisplay('.')">.</button>
+  </div>
+</div>`,
+                        css: `.calculator {
+  max-width: 320px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+}
+
+.display {
+  margin-bottom: 20px;
+}
+
+.display input {
+  width: 100%;
+  height: 60px;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.buttons button {
+  height: 60px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.buttons button:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.05);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+.equals {
+  grid-row: span 2;
+  background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+}
+
+.zero {
+  grid-column: span 2;
+}`,
+                        js: `let display = document.getElementById('display');
+let currentInput = '0';
+let operator = '';
+let previousInput = '';
+
+function updateDisplay() {
+  display.value = currentInput;
+}
+
+function appendToDisplay(value) {
+  if (currentInput === '0' && value !== '.') {
+    currentInput = value;
+  } else {
+    currentInput += value;
+  }
+  updateDisplay();
+}
+
+function clearDisplay() {
+  currentInput = '0';
+  operator = '';
+  previousInput = '';
+  updateDisplay();
+}
+
+function deleteLast() {
+  if (currentInput.length > 1) {
+    currentInput = currentInput.slice(0, -1);
+  } else {
+    currentInput = '0';
+  }
+  updateDisplay();
+}
+
+function calculate() {
+  try {
+    // Replace × with * for calculation
+    let expression = currentInput.replace(/×/g, '*');
+    let result = eval(expression);
+    currentInput = result.toString();
+    updateDisplay();
+  } catch (error) {
+    currentInput = 'Error';
+    updateDisplay();
+    setTimeout(() => {
+      currentInput = '0';
+      updateDisplay();
+    }, 2000);
+  }
+}
+
+updateDisplay();`
+                    },
+                    todo: {
+                        html: `<div class="todo-app">
+  <div class="todo-header">
+    <h2>📝 My Todo List</h2>
+    <div class="input-container">
+      <input type="text" id="todoInput" placeholder="Add new task...">
+      <button onclick="addTodo()">Add</button>
+    </div>
+  </div>
+  <div class="todo-list" id="todoList">
+    <!-- Tasks will be added here -->
+  </div>
+</div>`,
+                        css: `.todo-app {
+  max-width: 400px;
+  margin: 20px auto;
+  background: linear-gradient(135deg, #8B5CF6, #A855F7);
+  border-radius: 15px;
+  color: white;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(139, 92, 246, 0.3);
+}
+
+.todo-header {
+  padding: 25px;
+  background: rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.todo-header h2 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+.input-container input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  font-size: 1rem;
+}
+
+.input-container input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.input-container button {
+  padding: 12px 20px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.input-container button:hover {
+  background: rgba(255,255,255,0.3);
+}
+
+.todo-list {
+  padding: 20px;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateX(5px);
+}
+
+.todo-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.todo-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.todo-item span {
+  flex: 1;
+  font-size: 1rem;
+}
+
+.todo-item button {
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.todo-item button:hover {
+  background: rgba(255,255,255,0.3);
+}`,
+                        js: `let todos = [];
+let todoId = 0;
+
+function addTodo() {
+  const input = document.getElementById('todoInput');
+  const text = input.value.trim();
+  
+  if (text === '') return;
+  
+  const todo = {
+    id: todoId++,
+    text: text,
+    completed: false
+  };
+  
+  todos.push(todo);
+  input.value = '';
+  renderTodos();
+}
+
+function toggleTodo(id) {
+  const todo = todos.find(t => t.id === id);
+  if (todo) {
+    todo.completed = !todo.completed;
+    renderTodos();
+  }
+}
+
+function deleteTodo(id) {
+  todos = todos.filter(t => t.id !== id);
+  renderTodos();
+}
+
+function renderTodos() {
+  const todoList = document.getElementById('todoList');
+  
+  if (todos.length === 0) {
+    todoList.innerHTML = '<p style="text-align: center; opacity: 0.7; padding: 20px;">No tasks yet. Add one above!</p>';
+    return;
+  }
+  
+  todoList.innerHTML = todos.map(todo => \`
+    <div class="todo-item \${todo.completed ? 'completed' : ''}">
+      <input type="checkbox" \${todo.completed ? 'checked' : ''} 
+             onchange="toggleTodo(\${todo.id})">
+      <span>\${todo.text}</span>
+      <button onclick="deleteTodo(\${todo.id})">Delete</button>
+    </div>
+  \`).join('');
+}
+
+// Allow adding todo with Enter key
+document.getElementById('todoInput').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    addTodo();
+  }
+});
+
+// Initial render
+renderTodos();`
+                    },
+                    clock: {
+                        html: `<div class="clock-container">
+  <div class="digital-clock">
+    <div class="time-display">
+      <span id="hours">00</span>
+      <span class="separator">:</span>
+      <span id="minutes">00</span>
+      <span class="separator">:</span>
+      <span id="seconds">00</span>
+    </div>
+    <div class="date-display">
+      <span id="date"></span>
+    </div>
+  </div>
+  <div class="timezone-info">
+    <span id="timezone"></span>
+  </div>
+</div>`,
+                        css: `.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-radius: 15px;
+  color: white;
+  font-family: 'Courier New', monospace;
+  padding: 40px;
+  box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
+}
+
+.digital-clock {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.time-display {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.time-display span {
+  display: inline-block;
+  min-width: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.time-display span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.separator {
+  min-width: auto !important;
+  background: none !important;
+  padding: 0 !important;
+  font-size: 3rem;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+.date-display {
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+.timezone-info {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .time-display {
+    font-size: 2.5rem;
+  }
+  
+  .time-display span {
+    min-width: 60px;
+    padding: 10px;
+  }
+  
+  .separator {
+    font-size: 2rem;
+  }
+}`,
+                        js: `function updateClock() {
+  const now = new Date();
+  
+  // Get time components
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  
+  // Update time display
+  document.getElementById('hours').textContent = hours;
+  document.getElementById('minutes').textContent = minutes;
+  document.getElementById('seconds').textContent = seconds;
+  
+  // Update date display
+  const options = { 
+    weekday: 'long', 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  };
+  const dateString = now.toLocaleDateString('en-US', options);
+  document.getElementById('date').textContent = dateString;
+  
+  // Update timezone
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  document.getElementById('timezone').textContent = timezone;
+}
+
+// Update clock immediately
+updateClock();
+
+// Update every second
+setInterval(updateClock, 1000);
+
+// Add color change effect every 10 seconds
+setInterval(() => {
+  const colors = [
+    'linear-gradient(135deg, #1e3c72, #2a5298)',
+    'linear-gradient(135deg, #667eea, #764ba2)',
+    'linear-gradient(135deg, #f093fb, #f5576c)',
+    'linear-gradient(135deg, #4facfe, #00f2fe)',
+    'linear-gradient(135deg, #43e97b, #38f9d7)'
+  ];
+  
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.querySelector('.clock-container').style.background = randomColor;
+}, 10000);`
+                    }
+                };
+                
+                this.init();
+            }
+            
+            init() {
+                this.setupEventListeners();
+                this.loadExample('card'); // Load default example
+            }
+            
+            setupEventListeners() {
+                // Tab switching
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        this.switchTab(e.target.dataset.tab);
+                    });
+                });
+                
+                // Example selector
+                this.exampleSelector.addEventListener('change', (e) => {
+                    if (e.target.value) {
+                        this.loadExample(e.target.value);
+                    }
+                });
+                
+                // Control buttons
+                this.runButton.addEventListener('click', () => this.runCode());
+                this.resetButton.addEventListener('click', () => this.resetCode());
+                this.fullscreenButton.addEventListener('click', () => this.toggleFullscreen());
+                
+                // Auto-run on code change (with debounce)
+                let debounceTimer;
+                [this.htmlEditor, this.cssEditor, this.jsEditor].forEach(editor => {
+                    editor.addEventListener('input', () => {
+                        clearTimeout(debounceTimer);
+                        debounceTimer = setTimeout(() => this.runCode(), 1000);
+                    });
+                });
+            }
+            
+            switchTab(tab) {
+                // Update active tab button
+                document.querySelectorAll('.tab-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+                
+                // Update active editor
+                document.querySelectorAll('.editor-tab').forEach(editor => {
+                    editor.classList.remove('active');
+                });
+                document.querySelector('.editor-tab[data-tab="' + tab + '"]').classList.add('active');
+                
+                this.currentTab = tab;
+            }
+            
+            loadExample(exampleName) {
+                const example = this.examples[exampleName];
+                if (example) {
+                    this.htmlEditor.value = example.html;
+                    this.cssEditor.value = example.css;
+                    this.jsEditor.value = example.js;
+                    this.runCode();
+                }
+            }
+            
+            runCode() {
+                const html = this.htmlEditor.value;
+                const css = this.cssEditor.value;
+                const js = this.jsEditor.value;
+                
+                const iframe = this.previewFrame;
+                const doc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                doc.open();
+                doc.write('<!DOCTYPE html>');
+                doc.write('<html><head>');
+                doc.write('<style>body{margin:0;padding:20px;font-family:Arial,sans-serif;background:#f5f5f5;}');
+                doc.write(css);
+                doc.write('</style></head><body>');
+                doc.write(html);
+                doc.write('<script>');
+                doc.write('try{');
+                doc.write(js);
+                doc.write('}catch(e){console.error("Error:",e);document.body.innerHTML+="<div style=color:red;background:#fff;padding:10px;border-radius:5px;margin-top:10px;border:1px solid #ddd;><strong>Error:</strong> "+e.message+"</div>";}');
+                doc.write('<\/script>');
+                doc.write('</body></html>');
+                doc.close();
+            }
+            
+            resetCode() {
+                this.htmlEditor.value = '';
+                this.cssEditor.value = '';
+                this.jsEditor.value = '';
+                this.previewFrame.srcdoc = '';
+                this.exampleSelector.value = '';
+            }
+            
+            toggleFullscreen() {
+                const previewPanel = document.querySelector('.preview-panel');
+                previewPanel.classList.toggle('fullscreen');
+                
+                if (previewPanel.classList.contains('fullscreen')) {
+                    this.fullscreenButton.innerHTML = '<i class="fas fa-compress"></i>';
+                } else {
+                    this.fullscreenButton.innerHTML = '<i class="fas fa-expand"></i>';
+                }
+            }
+        }
+        
+        // Initialize playground when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Force show playground section for Edge compatibility
+            const playgroundSection = document.getElementById('playground');
+            if (playgroundSection) {
+                playgroundSection.style.display = 'block';
+                playgroundSection.style.visibility = 'visible';
+                playgroundSection.style.opacity = '1';
+            }
+            
+            // Initialize playground if elements exist
+            if (document.getElementById('htmlEditor')) {
+                new CodePlayground();
+            }
+        });
+
+        // Fallback initialization for older browsers
+        window.addEventListener('load', function() {
+            const playgroundSection = document.getElementById('playground');
+            if (playgroundSection) {
+                playgroundSection.style.display = 'block';
+                playgroundSection.style.visibility = 'visible';
+                playgroundSection.style.opacity = '1';
+            }
+        });
+
+        // Debug function to check if playground is visible
+        function checkPlaygroundVisibility() {
+            const playground = document.getElementById('playground');
+            if (playground) {
+                console.log('Playground found:', playground);
+                console.log('Playground display:', getComputedStyle(playground).display);
+                console.log('Playground visibility:', getComputedStyle(playground).visibility);
+                console.log('Playground opacity:', getComputedStyle(playground).opacity);
+                
+                // Force show if hidden
+                if (getComputedStyle(playground).display === 'none' || 
+                    getComputedStyle(playground).visibility === 'hidden' || 
+                    getComputedStyle(playground).opacity === '0') {
+                    
+                    playground.style.display = 'block';
+                    playground.style.visibility = 'visible';
+                    playground.style.opacity = '1';
+                    console.log('Playground forced visible');
+                }
+            } else {
+                console.log('Playground not found');
+            }
+        }
+
+        // Run debug function after page loads
+        setTimeout(checkPlaygroundVisibility, 2000);
+
+        // Additional fallback for Microsoft Edge
+        if (navigator.userAgent.indexOf('Edge') > -1 || navigator.userAgent.indexOf('Edg') > -1) {
+            console.log('Microsoft Edge detected - applying fixes');
+            
+            // Force show playground on Edge
+            setTimeout(function() {
+                const playground = document.getElementById('playground');
+                if (playground) {
+                    playground.style.display = 'block';
+                    playground.style.visibility = 'visible';
+                    playground.style.opacity = '1';
+                    playground.style.position = 'relative';
+                    playground.style.zIndex = '1';
+                }
+                
+                const container = document.querySelector('.playground-container');
+                if (container) {
+                    container.style.display = 'block';
+                    container.style.visibility = 'visible';
+                    container.style.opacity = '1';
+                    container.style.background = 'rgba(255, 255, 255, 0.1)';
+                    container.style.border = '1px solid rgba(255, 255, 255, 0.2)';
+                }
+            }, 100);
+        }
 
         // Form field animations
         document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(field => {
